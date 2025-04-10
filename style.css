@@ -1,0 +1,211 @@
+:root {
+    --primary-color: #7d6ea5;
+    --text-style: 'Fredoka', sans-serif;
+    --text-color: #417660;
+    --text-color-lighter: #699482;
+    --secondary-color:  #daac5e;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    padding: 20px 5px;
+    border-bottom: var(--secondary-color) 6px solid;
+  }
+  
+  .header__logo {
+    margin-right: auto;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .header__logo img {
+    transition: all 0.5s ease;
+  }
+  
+  .header__logo:hover img {
+    animation: pivot 2s ease-in-out infinite;
+  }
+
+
+  @keyframes pivot {
+    0%, 100% {
+      transform: translateX(0) rotate(0);
+    }
+    50% {
+        transform: translateX(15px);
+    }
+    75% {
+      transform: translateX(15px) rotate(-5deg)
+    }
+    100% {
+        transform: translateX(15px) rotate(-5deg); 
+    }
+  }
+
+
+  .header__link {
+    font-size: 20px;
+    font-family: var(--text-style);
+    color: var(--secondary-color);
+    text-decoration: none;
+  }
+    
+  .header__link:hover {
+    text-decoration: underline;
+  }
+  
+  .header__nav {
+    display: flex;
+    margin-top: auto;
+    column-gap: 10px
+  }
+  
+  .header__link:not(:first-of-type) {
+    margin-left: 16px;
+  }
+    
+  .page {
+    display: flex;
+    flex-direction: column;
+    background-image: url(images/background.jpg);
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    font-family: var(--text-style);
+    margin: 0px;
+    font-size: 24px;
+    color: var(--text-color);
+  }
+  
+  .container {
+    background-color: rgba(255, 255, 255, 0.8);
+    max-height: 80vh;
+    max-width: 80vw;
+    padding: 10px 20px;
+    border-radius: 5px 5px;
+    margin: 30px auto;
+    overflow-y: auto; 
+  }
+  
+  .container__title { 
+    font-size: 40px; 
+    margin: 5px 0 2px;   
+    line-height: 1.2;
+  }
+  
+  .container__subtitle {  
+    font-size: 30px;    
+    margin: 5px 0 2px;  
+    line-height: 1.3;
+  }
+  
+  .image-center,
+  .button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 20px 0;
+  }
+  
+  .image-center img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .footer {
+    background-color: var(--primary-color);
+    border-top: var(--secondary-color) 6px solid;
+    text-align: center;
+    font-family: var(--text-style);
+    padding: 5px;
+    color: white;
+  }
+
+
+  .resolution{
+    background-color: lightblue;
+    border: 1px solid #7d6ea5;
+    padding: 10px;
+    margin-top:10px;
+    margin-bottom: 10px;
+  }
+
+  .ready{
+    background-color: lightgoldenrodyellow;
+    border: 1px solid #7d6ea5;
+    padding: 10px;
+    margin-top:10px;
+    margin-bottom: 10px;
+  }
+
+  .cop {
+    background-color: #daac5e;
+    border: 1px solid #7d6ea5;
+    padding: 10px;
+    margin-top:10px;
+    margin-bottom: 10px;
+  }
+
+  .wedding {
+    background-color: lightgrey;
+    border: 1px solid #7d6ea5;
+    padding: 10px;
+    margin-top:10px;
+    margin-bottom: 10px;
+  }
+  
+  .scenes{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .container__thirdtitle{
+    font-size: 20px;
+  }
+
+  .scene-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  @media only screen and (max-width:980px) 
+    {
+        header{
+           display: block;
+           align-items: center;
+           justify-content: center;
+           flex-direction: column;
+           padding: 20px;
+        }
+
+        nav{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-top: 40px;
+    
+        }
+
+        main > section {
+            flex-direction: column;
+            text-align: center;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .header__logo {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 50px;
+            align-items: center;
+        }
+  }
+     
+
+       
